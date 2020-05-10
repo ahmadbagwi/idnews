@@ -1,10 +1,27 @@
 <template>
   <div id="app">
     <header>
-      <span>Vue.js PWA</span>
+      <div>
+        <b-navbar toggleable="sm" type="dark">
+          <b-navbar-brand href="#"><img src="/static/img/icons/favicon-32x32.png" style="max-width:24px"/></b-navbar-brand>
+          <b-navbar-toggle target="navbar-toggle-collapse">
+            <template v-slot:default="{ expanded }">
+              Menu <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+              <b-icon v-else icon="chevron-bar-down"></b-icon>
+            </template>
+          </b-navbar-toggle>
+          <b-collapse id="navbar-toggle-collapse" is-nav>
+            <b-navbar-nav>
+              <router-link to="/"><b-nav-item href="/">Beranda</b-nav-item></router-link>
+              <router-link to="/sindo"><b-nav-item href="/sindo">Nasional</b-nav-item></router-link>
+              <router-link to="/international"><b-nav-item href="/international">Internasional</b-nav-item></router-link>
+              <router-link to="/covid"><b-nav-item href="/covid">Info Covid</b-nav-item></router-link>
+            </b-navbar-nav>
+          </b-collapse>
+        </b-navbar>
+      </div>
     </header>
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
       <router-view></router-view>
     </main>
   </div>
@@ -17,6 +34,11 @@ export default {
 </script>
 
 <style>
+nav.navbar.navbar-dark.navbar-expand-sm {
+  z-index: 10000!important;
+  background: #35495e;
+}
+
 body {
   margin: 0;
 }
