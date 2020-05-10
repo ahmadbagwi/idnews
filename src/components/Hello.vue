@@ -1,21 +1,33 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="http://chat.vuejs.org/" target="_blank" rel="noopener">Vue Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank" rel="noopener">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div>
+      <b-container>
+        <b-row>
+          <b-col col lg="12">
+            <b-jumbotron :header="h" :lead="l">
+              <p>{{ p }}</p>
+              <b-button variant="outline-primary" href="https://wa.me/6285719191852">Order PWA</b-button>
+            </b-jumbotron>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col col lg="12">
+            <strong><p>Kelebihan PWA</p></strong>
+            <b-list-group>
+              <b-list-group-item variant="info">Ringan dan cepat</b-list-group-item>
+              <b-list-group-item variant="primary">Berjalan saat offline</b-list-group-item>
+              <b-list-group-item variant="secondary">PWA dapat mengcover web dan app sekaligus</b-list-group-item>
+              <b-list-group-item variant="success">Setelah diinstall, tidak perlu buka url</b-list-group-item>
+              <b-list-group-item variant="danger">UI UX seperti aplikasi native (Playstore)</b-list-group-item>
+              <b-list-group-item variant="warning">Hemat biaya (web dan app dalam 1 paket)</b-list-group-item>
+              <b-list-group-item variant="info">Modern</b-list-group-item>
+              <b-list-group-item variant="primary">Sedang berkembang</b-list-group-item>
+              <b-list-group-item variant="dark">Waktu development lebih cepat</b-list-group-item>
+            </b-list-group>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
   </div>
 </template>
 
@@ -24,16 +36,22 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js PWA'
+      h: 'PWA Test app',
+      l: 'Progressive Web Application',
+      p: 'Adalah aplikasi web yang berjalan layaknya aplikasi native, anda dapat menginstall web PWA pada smartphone dan berjalan persis seperti aplikasi dari Playstore, brand besar seperti tokopedia dan twitter telah mengaplikasikan konsep PWA, bahkan konversi alibaba mengingkat menjadi 76% dengan PWA'
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 h1, h2 {
   font-weight: normal;
+}
+
+.display-3 {
+    font-size: 2.5rem!important;
 }
 
 ul {
