@@ -1,6 +1,6 @@
 <template>
   <div class="international">
-    <strong><p>Berita Internasional</p></strong>
+    <strong><p>Berita Internasional (powered by NewsAPI.org)</p></strong>
     <b-container>
       <b-row>
         <div class="m-auto" v-if="$loading==true">
