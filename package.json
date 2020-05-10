@@ -19,7 +19,8 @@
     "newsapi": "^2.4.0",
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "express": "^4.16.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.5",
